@@ -16,8 +16,8 @@ app.use(express.static('public')); // Serve static files from public directory
 
 // AWS Configuration
 const AWS_REGION = process.env.AWS_REGION || 'us-east-1';
-const AGENT_ID = 'BWLIU13QYP';
-const AGENT_ALIAS_ID = 'CAX1BYK1MK'; // Learning-poc alias
+const AGENT_ID = 'PPWFRG9GNU';
+const AGENT_ALIAS_ID = 'OME3LP9LLH'; // Learning-poc alias
 
 // Initialize Bedrock Agent Runtime Client
 const bedrockClient = new BedrockAgentRuntimeClient({
