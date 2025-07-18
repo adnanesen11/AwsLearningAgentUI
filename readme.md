@@ -32,20 +32,19 @@ cp .env.example .env
 nano .env
 3. Project Structure
 learning-chatbot/
-├── index.html          # Frontend interface
-├── script.js           # Frontend JavaScript
-├── server.js           # Node.js backend server
-├── package.json        # Dependencies
-├── .env.example        # Environment template
-└── README.md          # This file
+├── index.html      # Frontend interface
+├── script.js       # Frontend JavaScript
+├── server.js       # Node.js backend server
+├── package.json    # Dependencies
+├── .env.example    # Environment template
+└── README.md       # This file
 4. Start the Application
 Development mode:
 bashnpm run dev
 Production mode:
 bashnpm start
 5. Access the Application
-Open your browser and navigate to:
-http://localhost:3000
+Open your browser and navigate to: http://localhost:3000
 Configuration
 Agent Configuration
 Your agent details are already configured in the code:
@@ -93,39 +92,33 @@ json{
         "bedrock:GetAgentAlias"
       ],
       "Resource": [
-        "arn:aws:bedrock:us-east-1:*:agent/BWLIU13QYP",
-        "arn:aws:bedrock:us-east-1:*:agent-alias/BWLIU13QYP/*"
+        "arn:aws:bedrock:us-east-1::agent/BWLIU13QYP",
+        "arn:aws:bedrock:us-east-1::agent-alias/BWLIU13QYP/*"
       ]
     }
   ]
 }
 Troubleshooting
 Common Issues
-
 Agent Not Found Error
 
 Verify your agent ID and alias ID are correct
 Check that the agent is in the same region as your configuration
-
 
 Access Denied
 
 Ensure your AWS credentials have the correct permissions
 Verify the agent is prepared and available
 
-
 Connection Timeout
 
 Check your internet connection
 Verify AWS region is correct
 
-
 Empty Responses
 
 Ensure your knowledge base is properly configured
 Check that training videos are uploaded to S3
-
-
 
 Debug Mode
 Set NODE_ENV=development to see detailed error messages:
@@ -179,6 +172,3 @@ For issues related to:
 AWS Bedrock: Check AWS documentation and support
 Agent Configuration: Verify your agent setup in AWS Console
 Application Issues: Check server logs and console errors
-
-License
-MIT License - See LICENSE file for details.
